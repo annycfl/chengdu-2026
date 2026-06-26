@@ -1,0 +1,1342 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026 臺灣工會青年研討營｜四川成都</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --red: #C0392B;
+    --red-light: #FDEDEC;
+    --red-mid: #E74C3C;
+    --gold: #B7860B;
+    --gold-light: #FEF9E7;
+    --gold-mid: #F39C12;
+    --navy: #1B2A4A;
+    --navy-mid: #2C3E6B;
+    --slate: #5D6D7E;
+    --slate-light: #F4F6F8;
+    --border: #DDE1E7;
+    --text: #1A1A2E;
+    --muted: #6B7280;
+    --white: #FFFFFF;
+  }
+
+  body {
+    font-family: 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+    background: #F7F8FA;
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 15px;
+  }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 60%, #3A5075 100%);
+    color: white;
+    padding: 52px 24px 44px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 220px; height: 220px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.04);
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -40px; left: -40px;
+    width: 160px; height: 160px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.03);
+  }
+  .hero-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 20px;
+    padding: 4px 16px;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    color: rgba(255,255,255,0.85);
+  }
+  .hero h1 {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+    line-height: 1.4;
+  }
+  .hero-sub {
+    font-size: 15px;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 24px;
+    letter-spacing: 1px;
+  }
+  .hero-meta {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+  }
+  .hero-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: rgba(255,255,255,0.8);
+  }
+  .hero-meta-item svg { opacity: 0.7; }
+
+  /* NAV TABS */
+  .tab-nav {
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .tab-nav::-webkit-scrollbar { display: none; }
+  .tab-btn {
+    flex-shrink: 0;
+    padding: 14px 20px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--muted);
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+    white-space: nowrap;
+    font-family: inherit;
+  }
+  .tab-btn.active, .tab-btn:hover {
+    color: var(--red);
+    border-bottom-color: var(--red);
+  }
+
+  /* SECTIONS */
+  .section { display: none; padding: 0 0 48px; }
+  .section.active { display: block; }
+
+  .container { max-width: 860px; margin: 0 auto; padding: 0 16px; }
+
+  /* SECTION HEADERS */
+  .section-header {
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    padding: 28px 16px 20px;
+    margin-bottom: 24px;
+  }
+  .section-header .container { padding: 0 16px; }
+  .section-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--navy);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 4px;
+  }
+  .section-title .icon-circle {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    background: var(--red-light);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .section-title .icon-circle svg { color: var(--red); }
+  .section-desc { font-size: 13px; color: var(--muted); margin-left: 46px; }
+
+  /* CARDS */
+  .card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 16px;
+  }
+  .card-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .card-title .dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--red);
+    flex-shrink: 0;
+  }
+
+  /* ALERT BOXES */
+  .alert {
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  .alert-red { background: var(--red-light); border-left: 3px solid var(--red); color: #7B241C; }
+  .alert-gold { background: var(--gold-light); border-left: 3px solid var(--gold-mid); color: #6E4B0A; }
+  .alert-blue { background: #EBF5FB; border-left: 3px solid #2E86C1; color: #1A5276; }
+  .alert-icon { flex-shrink: 0; margin-top: 1px; }
+
+  /* TIMELINE */
+  .timeline { position: relative; padding-left: 0; }
+  .day-block {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    margin-bottom: 16px;
+    overflow: hidden;
+  }
+  .day-header {
+    background: var(--navy);
+    color: white;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .day-number {
+    background: rgba(255,255,255,0.15);
+    border-radius: 6px;
+    padding: 3px 10px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    flex-shrink: 0;
+  }
+  .day-title { font-size: 15px; font-weight: 600; }
+  .day-date { font-size: 12px; color: rgba(255,255,255,0.65); margin-left: auto; }
+  .day-body { padding: 16px 20px; }
+  .schedule-item {
+    display: flex;
+    gap: 12px;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--slate-light);
+    font-size: 14px;
+  }
+  .schedule-item:last-child { border-bottom: none; padding-bottom: 0; }
+  .schedule-time {
+    min-width: 48px;
+    color: var(--red);
+    font-weight: 600;
+    font-size: 12px;
+    padding-top: 2px;
+    flex-shrink: 0;
+  }
+  .schedule-content { color: var(--text); line-height: 1.5; }
+  .schedule-note { font-size: 12px; color: var(--muted); margin-top: 2px; }
+
+  /* FLIGHT INFO */
+  .flight-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    margin-bottom: 16px;
+    overflow: hidden;
+  }
+  .flight-header {
+    background: var(--navy-mid);
+    color: white;
+    padding: 12px 20px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .flight-body { padding: 20px; }
+  .flight-route {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  .flight-point { text-align: center; }
+  .flight-city { font-size: 13px; color: var(--muted); }
+  .flight-code { font-size: 28px; font-weight: 700; color: var(--navy); line-height: 1.2; }
+  .flight-time { font-size: 18px; font-weight: 600; color: var(--text); }
+  .flight-arrow {
+    flex: 1;
+    text-align: center;
+    position: relative;
+    padding: 0 12px;
+  }
+  .flight-line {
+    height: 1px;
+    background: var(--border);
+    position: relative;
+    margin: 8px 0;
+  }
+  .flight-line::after {
+    content: '▶';
+    position: absolute;
+    right: -6px;
+    top: -8px;
+    color: var(--red);
+    font-size: 12px;
+  }
+  .flight-dur { font-size: 12px; color: var(--muted); }
+  .flight-tag {
+    display: inline-block;
+    background: var(--red-light);
+    color: var(--red);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 4px;
+  }
+  .flight-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    border-top: 1px solid var(--border);
+    padding-top: 16px;
+    margin-top: 4px;
+  }
+  .flight-detail-item { font-size: 13px; }
+  .flight-detail-label { color: var(--muted); font-size: 11px; margin-bottom: 2px; }
+  .flight-detail-value { font-weight: 500; color: var(--text); }
+
+  /* CHECKLIST */
+  .checklist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+  .check-item {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.15s;
+    user-select: none;
+  }
+  .check-item:hover { border-color: #AAB4BF; }
+  .check-item.checked {
+    background: var(--red-light);
+    border-color: #F1948A;
+  }
+  .check-item.checked .check-box {
+    background: var(--red);
+    border-color: var(--red);
+  }
+  .check-item.checked .check-box::after {
+    content: '✓';
+    color: white;
+    font-size: 11px;
+  }
+  .check-item.important {
+    border-color: var(--gold-mid);
+    background: var(--gold-light);
+  }
+  .check-item.important.checked {
+    background: #FDEBD0;
+    border-color: var(--gold-mid);
+  }
+  .check-box {
+    width: 18px; height: 18px;
+    border: 1.5px solid var(--border);
+    border-radius: 4px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.15s;
+  }
+  .check-progress {
+    background: var(--slate-light);
+    border-radius: 8px;
+    height: 6px;
+    margin-bottom: 6px;
+    overflow: hidden;
+  }
+  .check-progress-bar {
+    height: 100%;
+    background: var(--red);
+    border-radius: 8px;
+    transition: width 0.3s ease;
+  }
+  .check-count { font-size: 12px; color: var(--muted); margin-bottom: 16px; }
+
+  /* MEMBERS */
+  .member-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 12px;
+  }
+  .member-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .member-avatar {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    background: var(--navy);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+    flex-shrink: 0;
+  }
+  .member-name { font-size: 14px; font-weight: 600; color: var(--navy); }
+  .member-en { font-size: 11px; color: var(--muted); margin-top: 2px; line-height: 1.3; }
+  .member-num {
+    font-size: 11px;
+    color: var(--red);
+    font-weight: 700;
+    margin-left: auto;
+    flex-shrink: 0;
+  }
+
+  /* UNION INFO */
+  .union-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  @media (max-width: 600px) {
+    .union-grid { grid-template-columns: 1fr; }
+    .flight-route { flex-direction: column; gap: 12px; }
+    .flight-arrow { transform: rotate(90deg); }
+  }
+  .union-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .union-card-header {
+    padding: 14px 16px;
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+  }
+  .union-cfl .union-card-header { background: var(--navy); }
+  .union-acftu .union-card-header { background: #8B0000; }
+  .union-card-body { padding: 16px; font-size: 13px; }
+  .union-stat { margin-bottom: 10px; }
+  .union-stat-label { font-size: 11px; color: var(--muted); margin-bottom: 2px; }
+  .union-stat-value { font-size: 13px; font-weight: 500; color: var(--text); }
+  .divider { height: 1px; background: var(--border); margin: 16px 0; }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+  .tag {
+    font-size: 11px;
+    padding: 3px 9px;
+    border-radius: 4px;
+    font-weight: 500;
+  }
+  .tag-navy { background: #EBF0F8; color: var(--navy-mid); }
+  .tag-red { background: var(--red-light); color: var(--red); }
+
+  /* COMPARE TABLE */
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    margin-bottom: 16px;
+  }
+  .compare-table th {
+    background: var(--navy);
+    color: white;
+    padding: 10px 14px;
+    text-align: left;
+    font-weight: 600;
+  }
+  .compare-table th:first-child { border-radius: 8px 0 0 0; }
+  .compare-table th:last-child { border-radius: 0 8px 0 0; }
+  .compare-table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+    line-height: 1.5;
+  }
+  .compare-table tr:nth-child(even) td { background: var(--slate-light); }
+  .compare-table tr:last-child td { border-bottom: none; }
+
+  /* INFO LIST */
+  .info-list { list-style: none; }
+  .info-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--slate-light);
+    font-size: 14px;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  .info-list li:last-child { border-bottom: none; }
+  .info-bullet {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--red);
+    flex-shrink: 0;
+    margin-top: 7px;
+  }
+
+  /* PRINT */
+  @media print {
+    .tab-nav { display: none; }
+    .section { display: block !important; }
+    .section-header { break-before: page; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-badge">中華民國全國總工會</div>
+  <h1>2026 臺灣工會青年研討營</h1>
+  <div class="hero-sub">行走巴蜀大地　共話青春夢想</div>
+  <div class="hero-meta">
+    <div class="hero-meta-item">
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      2026 年 7 月 19 日 – 25 日
+    </div>
+    <div class="hero-meta-item">
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      四川省成都市
+    </div>
+  </div>
+</div>
+
+<!-- TAB NAV -->
+<nav class="tab-nav">
+  <button class="tab-btn active" onclick="showTab('itinerary')">📅 研討營日程</button>
+  <button class="tab-btn" onclick="showTab('flight')">✈️ 航班資訊</button>
+  <button class="tab-btn" onclick="showTab('checklist')">🧳 行李清單</button>
+  <button class="tab-btn" onclick="showTab('members')">👥 出訪成員</button>
+  <button class="tab-btn" onclick="showTab('union')">🏛️ 工會介紹</button>
+</nav>
+
+<!-- ═══════════════════════════════════ 行程 ═══════════════════════════════════ -->
+<div id="itinerary" class="section active">
+  <div class="section-header">
+    <div class="container">
+      <div class="section-title">
+        <div class="icon-circle">
+          <svg width="18" height="18" fill="none" stroke="#C0392B" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        </div>
+        研討營日程總覽
+      </div>
+      <div class="section-desc">7 天 6 夜・主辦：中國職工交流中心・在川食宿交通由大陸方面負擔</div>
+    </div>
+  </div>
+  <div class="container">
+
+    <div class="alert alert-red">
+      <div class="alert-icon">⚠️</div>
+      <div><strong>出發集合：</strong>7 月 19 日（週日）15:10，桃園國際機場<strong>第二航廈</strong>，中國國際航空報到櫃台。建議提早 3 小時辦理登機，去程航班 18:10 起飛。</div>
+    </div>
+
+    <div class="timeline">
+
+      <div class="day-block">
+        <div class="day-header">
+          <div class="day-number">DAY 1</div>
+          <div class="day-title">飛往成都・抵達入住</div>
+          <div class="day-date">7 月 19 日（週日）</div>
+        </div>
+        <div class="day-body">
+          <div class="schedule-item">
+            <div class="schedule-time">15:10</div>
+            <div class="schedule-content">
+              桃園機場第二航廈集合
+              <div class="schedule-note">國航報到櫃台辦理手續（建議 15:00 前報到）</div>
+            </div>
+          </div>
+          <div class="schedule-item">
+            <div class="schedule-time">18:10</div>
+            <div class="schedule-content">
+              起飛｜CA 桃園 TPE → 成都天府 TFU（直飛 3 小時 30 分）
+            </div>
+          </div>
+          <div class="schedule-item">
+            <div class="schedule-time">21:40</div>
+            <div class="schedule-content">
+              抵達成都天府國際機場・前往飯店入住
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-block">
+        <div class="day-header">
+          <div class="day-number">DAY 2</div>
+          <div class="day-title">開營典禮・工會交流・夜遊</div>
+          <div class="day-date">7 月 20 日（週一）</div>
+        </div>
+        <div class="day-body">
+          <div class="schedule-item">
+            <div class="schedule-time">上午</div>
+            <div class="schedule-content">
+              開營儀式及授旗儀式
+              <div class="schedule-note">兩岸營員參加工會工作交流座談會</div>
+            </div>
+          </div>
+          <div class="schedule-item">
+            <div class="schedule-time">中午</div>
+            <div class="schedule-content">歡迎午宴</div>
+          </div>
+          <div class="schedule-item">
+            <div class="schedule-time">下午</div>
+            <div class="schedule-content">
+              參訪成都智算中心、智元機器人成都數采工廠
+              <div class="schedule-note">兩岸青年就「AI 時代的青年機遇與挑戰」座談，分享科技應用、數字經濟創業經驗</div>
+            </div>
+          </div>
+          <div class="schedule-item">
+            <div class="schedule-time">晚上</div>
+            <div class="schedule-content">夜遊太古裏、九眼橋</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-block">
+        <div class="day-header">
+          <div class="day-number">DAY 3</div>
+          <div class="day-title">熊貓基地・三星堆</div>
+          <div class="day-date">7 月 21 日（週二）</div>
+        </div>
+        <div class="day-body">
+          <div class="schedule-item">
+            <div class="schedule-time">上午</div>
+            <div class="schedule-content">參觀成都大熊貓繁育研究基地</div>
+          </div>
+          <div class="schedule-item">
+            <div class="schedule-time">下午</div>
+            <div class="schedule-content">
+              前往德陽市廣漢市，參觀三星堆博物館
+            </div>
+          </div>
+          <div class="schedule-item">
+            <div class="schedule-time">晚上</div>
+            <div class="schedule-content">返回成都市區</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-block">
+        <div class="day-header">
+          <div class="day-number">DAY 4</div>
+          <div class="day-title">四川大學・樂山大佛</div>
+          <div class="day-date">7 月 22 日（週三）</div>
+        </div>
+        <div class="day-body">
+          <div class="schedule-item">
+            <div class="schedule-time">上午</div>
+            <div class="schedule-content">
+              前往四川大學，與川大師生座談交流
+            </div>
+          </div>
+          <div class="schedule-item">
+            <div class="schedule-time">下午</div>
+            <div class="schedule-content">前往樂山，參觀樂山大佛</div>
+          </div>
+          <div class="schedule-item">
+            <div class="schedule-time">晚上</div>
+            <div class="schedule-content">體驗傳統禪修</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-block">
+        <div class="day-header">
+          <div class="day-number">DAY 5</div>
+          <div class="day-title">路途故事會・宜賓竹文化</div>
+          <div class="day-date">7 月 23 日（週四）</div>
+        </div>
+        <div class="day-body">
+          <div class="schedule-item">
+            <div class="schedule-time">上午</div>
+            <div class="schedule-content">
+              前往宜賓，車上舉辦「路途故事會」
+              <div class="schedule-note">臺灣營員代表分享家鄉特產或風俗</div>
+            </div>
+          </div>
+          <div class="schedule-item">
+            <div class="schedule-time">下午</div>
+            <div class="schedule-content">
+              參觀李莊古鎮，前往宜賓竹文化博物館
+              <div class="schedule-note">體驗竹編非遺技藝</div>
+            </div>
+          </div>
+          <div class="schedule-item">
+            <div class="schedule-time">晚上</div>
+            <div class="schedule-content">乘船夜遊</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-block">
+        <div class="day-header">
+          <div class="day-number">DAY 6</div>
+          <div class="day-title">翠屏山・創業交流・閉營</div>
+          <div class="day-date">7 月 24 日（週五）</div>
+        </div>
+        <div class="day-body">
+          <div class="schedule-item">
+            <div class="schedule-time">上午</div>
+            <div class="schedule-content">參觀翠屏山</div>
+          </div>
+          <div class="schedule-item">
+            <div class="schedule-time">下午</div>
+            <div class="schedule-content">
+              參訪五糧液生態園區，與宜賓市創業青年座談
+              <div class="schedule-note">分享創業經歷、創業專案，探討川南創業環境與政策對接</div>
+            </div>
+          </div>
+          <div class="schedule-item">
+            <div class="schedule-time">傍晚</div>
+            <div class="schedule-content">研討營閉營儀式</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-block">
+        <div class="day-header" style="background: #2D6A4F;">
+          <div class="day-number">DAY 7</div>
+          <div class="day-title">返臺</div>
+          <div class="day-date">7 月 25 日（週六）</div>
+        </div>
+        <div class="day-body">
+          <div class="schedule-item">
+            <div class="schedule-time">13:30</div>
+            <div class="schedule-content">
+              成都天府 TFU 起飛｜CA 直飛 → 桃園 TPE（直飛 3 小時 25 分）
+            </div>
+          </div>
+          <div class="schedule-item">
+            <div class="schedule-time">16:55</div>
+            <div class="schedule-content">抵達桃園國際機場，全員平安返臺</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════ 航班 ═══════════════════════════════════ -->
+<div id="flight" class="section">
+  <div class="section-header">
+    <div class="container">
+      <div class="section-title">
+        <div class="icon-circle">
+          <svg width="18" height="18" fill="none" stroke="#C0392B" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.95 10.5a19.79 19.79 0 01-3-8.57A2 2 0 012.9 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 7.68a16 16 0 006.29 6.29l1.05-1.05a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 15v1.92z"/></svg>
+        </div>
+        航班資訊
+      </div>
+      <div class="section-desc">中國國際航空（Air China）・桃園 ⇄ 成都天府</div>
+    </div>
+  </div>
+  <div class="container">
+
+    <div class="alert alert-red">
+      <div class="alert-icon">✈️</div>
+      <div><strong>集合時間：</strong>7 月 19 日（週日）15:10，桃園機場<strong>第二航廈（T2）</strong>，中國國際航空報到櫃台。建議最晚 15:00 完成報到。</div>
+    </div>
+
+    <div class="flight-card">
+      <div class="flight-header">
+        ✈ 去程航班
+      </div>
+      <div class="flight-body">
+        <div class="flight-route">
+          <div class="flight-point">
+            <div class="flight-city">台北桃園 T2</div>
+            <div class="flight-code">TPE</div>
+            <div class="flight-time">18:10</div>
+          </div>
+          <div class="flight-arrow">
+            <div class="flight-dur">直飛</div>
+            <div class="flight-line"></div>
+            <div class="flight-dur">3 小時 30 分</div>
+            <div style="margin-top:4px"><span class="flight-tag">直飛</span></div>
+          </div>
+          <div class="flight-point">
+            <div class="flight-city">成都天府</div>
+            <div class="flight-code">TFU</div>
+            <div class="flight-time">21:40</div>
+          </div>
+        </div>
+        <div class="flight-details">
+          <div class="flight-detail-item">
+            <div class="flight-detail-label">航空公司</div>
+            <div class="flight-detail-value">中國國際航空 Air China</div>
+          </div>
+          <div class="flight-detail-item">
+            <div class="flight-detail-label">出發日期</div>
+            <div class="flight-detail-value">2026 年 7 月 19 日（週日）</div>
+          </div>
+          <div class="flight-detail-item">
+            <div class="flight-detail-label">出發航廈</div>
+            <div class="flight-detail-value">桃園機場 第二航廈（T2）</div>
+          </div>
+          <div class="flight-detail-item">
+            <div class="flight-detail-label">集合時間</div>
+            <div class="flight-detail-value">15:10（建議提早至 15:00）</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flight-card">
+      <div class="flight-header" style="background: #2D6A4F;">
+        ✈ 回程航班
+      </div>
+      <div class="flight-body">
+        <div class="flight-route">
+          <div class="flight-point">
+            <div class="flight-city">成都天府</div>
+            <div class="flight-code">TFU</div>
+            <div class="flight-time">13:30</div>
+          </div>
+          <div class="flight-arrow">
+            <div class="flight-dur">直飛</div>
+            <div class="flight-line"></div>
+            <div class="flight-dur">3 小時 25 分</div>
+            <div style="margin-top:4px"><span class="flight-tag">直飛</span></div>
+          </div>
+          <div class="flight-point">
+            <div class="flight-city">台北桃園 T2</div>
+            <div class="flight-code">TPE</div>
+            <div class="flight-time">16:55</div>
+          </div>
+        </div>
+        <div class="flight-details">
+          <div class="flight-detail-item">
+            <div class="flight-detail-label">航空公司</div>
+            <div class="flight-detail-value">中國國際航空 Air China</div>
+          </div>
+          <div class="flight-detail-item">
+            <div class="flight-detail-label">回程日期</div>
+            <div class="flight-detail-value">2026 年 7 月 25 日（週六）</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><div class="dot"></div>行李規定（國航經濟艙）</div>
+      <ul class="info-list">
+        <li><div class="info-bullet"></div><div>託運行李：23 kg／件（1 件免費）</div></li>
+        <li><div class="info-bullet"></div><div>隨身手提行李：10 kg（含電腦包，尺寸限制請依機票確認）</div></li>
+        <li><div class="info-bullet"></div><div>行動電源必須放手提行李，<strong>不可託運</strong>，須標示容量（mAh 或 Wh）</div></li>
+        <li><div class="info-bullet"></div><div><strong>完全禁止攜帶打火機</strong>（不論託運或手提皆不可）</div></li>
+        <li><div class="info-bullet"></div><div>飛大陸航班安全規定較嚴格，報到前請確認行李內物品</div></li>
+      </ul>
+    </div>
+
+    <div class="alert alert-gold">
+      <div class="alert-icon">💡</div>
+      <div>若計畫在大陸轉機，請務必事先辦理<strong>台胞證</strong>（實體），切勿依賴落地簽轉機，以免時間不足或被拒絕入境。</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════ 清單 ═══════════════════════════════════ -->
+<div id="checklist" class="section">
+  <div class="section-header">
+    <div class="container">
+      <div class="section-title">
+        <div class="icon-circle">
+          <svg width="18" height="18" fill="none" stroke="#C0392B" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+        </div>
+        行前準備清單
+      </div>
+      <div class="section-desc">點選項目標記完成・金色框為必備重要文件</div>
+    </div>
+  </div>
+  <div class="container">
+
+    <div class="alert alert-blue">
+      <div class="alert-icon">ℹ️</div>
+      <div>此次前往<strong>成都</strong>（大陸城市），無需多國轉換插頭；大陸插座與臺灣相同，無需另備轉換插頭。出發前請確認台胞證效期。</div>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><div class="dot"></div>出發前最後檢查（四大必備）</div>
+      <div id="progress-bar-wrap">
+        <div class="check-progress"><div class="check-progress-bar" id="progress-bar" style="width:0%"></div></div>
+        <div class="check-count" id="check-count">已完成 0 / 29 項</div>
+      </div>
+    </div>
+
+    <div class="card" style="border-color: var(--gold-mid);">
+      <div class="card-title"><div class="dot" style="background:var(--gold-mid)"></div>四大必備（出發前再次確認）</div>
+      <div class="checklist-grid" id="important-checks">
+        <div class="check-item important" onclick="toggleCheck(this)"><div class="check-box"></div>護照（效期 6 個月以上）</div>
+        <div class="check-item important" onclick="toggleCheck(this)"><div class="check-box"></div>台胞證（實體）</div>
+        <div class="check-item important" onclick="toggleCheck(this)"><div class="check-box"></div>信用卡</div>
+        <div class="check-item important" onclick="toggleCheck(this)"><div class="check-box"></div>手機（已充飽電）</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><div class="dot"></div>個人攜帶物品清單（共 25 項）</div>
+      <div class="checklist-grid" id="general-checks">
+        <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"></div>個人藥品</div>
+        <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"></div>輕薄外套</div>
+        <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"></div>手機電源線</div>
+        <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"></div>盥洗用品</div>
+        <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"></div>自用毛巾</div>
+        <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"></div>保溫瓶</div>
+        <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"></div>平安符</div>
+        <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"></div>個人零食</div>
+        <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"></div>行動電源（標示電量）</div>
+        <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"></div>貼身腰包（防盜）</div>
+        <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"></div>環保購物袋</div>
+        <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"></div>輕便晴雨傘</div>
+        <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"></div>護照影本</div>
+        <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"></div>2 吋照片</div>
+        <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"></div>輕薄羽絨（上山備）</div>
+        <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"></div>保鮮盒（帶午餐）</div>
+        <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"></div>護照影本（備份）</div>
+        <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"></div>大頭照（護照用備）</div>
+        <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"></div>會議證明文件</div>
+        <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"></div>口罩</div>
+        <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"></div>保險單據</div>
+        <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"></div>帽子</div>
+        <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"></div>墨鏡</div>
+        <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"></div>手機繩（防搶）</div>
+        <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"></div>正裝一套（襯衫西裝）</div>
+        <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"></div>工會背心及名片</div>
+        <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"></div>筷子（習慣者）</div>
+      </div>
+    </div>
+
+    <div class="alert alert-gold">
+      <div class="alert-icon">📝</div>
+      <div>成都 7 月氣溫約 28–35°C，濕熱、多雷陣雨。建議攜帶輕薄透氣衣物為主，登山備薄外套，雨傘勿忘。<br>由於去成都不需轉接不同電壓插座，<strong>多國轉換插頭可不必攜帶</strong>。</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════ 成員 ═══════════════════════════════════ -->
+<div id="members" class="section">
+  <div class="section-header">
+    <div class="container">
+      <div class="section-title">
+        <div class="icon-circle">
+          <svg width="18" height="18" fill="none" stroke="#C0392B" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        出訪成員名單
+      </div>
+      <div class="section-desc">依登記序號排列</div>
+    </div>
+  </div>
+  <div class="container">
+
+    <div class="alert alert-blue">
+      <div class="alert-icon">ℹ️</div>
+      <div>出發前請確認護照英文姓名拼音與機票一致，如有差異請提前告知帶隊人員處理。</div>
+    </div>
+
+    <div class="member-grid">
+      <div class="member-card">
+        <div class="member-avatar" style="background:#1B2A4A">吳</div>
+        <div>
+          <div class="member-name">吳蔚宸</div>
+          <div class="member-en">WU, WEI-CHEN</div>
+        </div>
+        <div class="member-num">No.1</div>
+      </div>
+      <div class="member-card">
+        <div class="member-avatar" style="background:#2C3E6B">蔡</div>
+        <div>
+          <div class="member-name">蔡杰廷</div>
+          <div class="member-en">TSAI, CHIEH-TING</div>
+        </div>
+        <div class="member-num">No.2</div>
+      </div>
+      <div class="member-card">
+        <div class="member-avatar" style="background:#3A5075">張</div>
+        <div>
+          <div class="member-name">張元䅍</div>
+          <div class="member-en">ZHANG, YUAN-TING</div>
+        </div>
+        <div class="member-num">No.3</div>
+      </div>
+      <div class="member-card">
+        <div class="member-avatar" style="background:#1B2A4A">鄭</div>
+        <div>
+          <div class="member-name">鄭杰方</div>
+          <div class="member-en">CHENG, CHIEH-FANG</div>
+        </div>
+        <div class="member-num">No.4</div>
+      </div>
+      <div class="member-card">
+        <div class="member-avatar" style="background:#2C3E6B">邱</div>
+        <div>
+          <div class="member-name">邱秉鈞</div>
+          <div class="member-en">CHIU, BING-JIUN</div>
+        </div>
+        <div class="member-num">No.5</div>
+      </div>
+      <div class="member-card">
+        <div class="member-avatar" style="background:#3A5075">游</div>
+        <div>
+          <div class="member-name">游宸宇</div>
+          <div class="member-en">YU, CHEN-YU</div>
+        </div>
+        <div class="member-num">No.6</div>
+      </div>
+      <div class="member-card">
+        <div class="member-avatar" style="background:#1B2A4A">謝</div>
+        <div>
+          <div class="member-name">謝勝瑋</div>
+          <div class="member-en">HSIEH SHENG-WEI</div>
+        </div>
+        <div class="member-num">No.7</div>
+      </div>
+      <div class="member-card">
+        <div class="member-avatar" style="background:#2C3E6B">陳</div>
+        <div>
+          <div class="member-name">陳昱任</div>
+          <div class="member-en">CHEN, YU-REN</div>
+        </div>
+        <div class="member-num">No.8</div>
+      </div>
+      <div class="member-card">
+        <div class="member-avatar" style="background:#3A5075">徐</div>
+        <div>
+          <div class="member-name">徐為廷</div>
+          <div class="member-en">XU, WEI-TING</div>
+        </div>
+        <div class="member-num">No.9</div>
+      </div>
+      <div class="member-card">
+        <div class="member-avatar" style="background:#1B2A4A">游</div>
+        <div>
+          <div class="member-name">游承翰</div>
+          <div class="member-en">YU, CHEN-HAN</div>
+        </div>
+        <div class="member-num">No.10</div>
+      </div>
+    </div>
+
+    <div style="margin-top:20px" class="card">
+      <div class="card-title"><div class="dot"></div>大陸方聯絡人</div>
+      <ul class="info-list">
+        <li><div class="info-bullet"></div><div><strong>主辦單位：</strong>中國職工交流中心</div></li>
+        <li><div class="info-bullet"></div><div><strong>聯絡人：</strong>趙雲霄</div></li>
+        <li><div class="info-bullet"></div><div><strong>電話：</strong>+86-10-68591143</div></li>
+        <li><div class="info-bullet"></div><div><strong>傳真：</strong>010-68562029</div></li>
+        <li><div class="info-bullet"></div><div><strong>電子郵箱：</strong>qztwllc@163.com</div></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════ 工會 ═══════════════════════════════════ -->
+<div id="union" class="section">
+  <div class="section-header">
+    <div class="container">
+      <div class="section-title">
+        <div class="icon-circle">
+          <svg width="18" height="18" fill="none" stroke="#C0392B" stroke-width="2" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        兩岸全國總工會簡介
+      </div>
+      <div class="section-desc">中華民國全國總工會（CFL）與中華全國總工會（ACFTU）歷史發展與現況</div>
+    </div>
+  </div>
+  <div class="container">
+
+    <!-- 概覽卡片 -->
+    <div class="union-grid">
+      <div class="union-card union-cfl">
+        <div class="union-card-header">🇹🇼 中華民國全國總工會（CFL）</div>
+        <div class="union-card-body">
+          <div class="union-stat">
+            <div class="union-stat-label">正式成立</div>
+            <div class="union-stat-value">1948 年，南京・遷臺後 1951 年復會</div>
+          </div>
+          <div class="union-stat">
+            <div class="union-stat-label">現址</div>
+            <div class="union-stat-value">臺中市（2024 年 5 月遷入）</div>
+          </div>
+          <div class="union-stat">
+            <div class="union-stat-label">會員人數</div>
+            <div class="union-stat-value">逾 300 萬人</div>
+          </div>
+          <div class="union-stat">
+            <div class="union-stat-label">國際地位</div>
+            <div class="union-stat-value">ITUC 成員及亞太區執委・臺灣唯一具完整會員資格全國性工會</div>
+          </div>
+          <div class="union-stat">
+            <div class="union-stat-label">現況定位</div>
+            <div class="union-stat-value">2000 年正名第三屆，多元工會並立時代的重要勞工團體</div>
+          </div>
+          <div class="divider"></div>
+          <div class="tag-row">
+            <span class="tag tag-navy">三民主義</span>
+            <span class="tag tag-navy">ITUC 成員</span>
+            <span class="tag tag-navy">國際勞工外交</span>
+            <span class="tag tag-navy">民主化轉型</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="union-card union-acftu">
+        <div class="union-card-header">🇨🇳 中華全國總工會（ACFTU）</div>
+        <div class="union-card-body">
+          <div class="union-stat">
+            <div class="union-stat-label">成立</div>
+            <div class="union-stat-value">1925 年廣州・1948 年哈爾濱重組</div>
+          </div>
+          <div class="union-stat">
+            <div class="union-stat-label">組織層級</div>
+            <div class="union-stat-value">正部級單位（主席高配副國級）</div>
+          </div>
+          <div class="union-stat">
+            <div class="union-stat-label">法律地位</div>
+            <div class="union-stat-value">中華人民共和國境內唯一合法全國性工會（排他性）</div>
+          </div>
+          <div class="union-stat">
+            <div class="union-stat-label">國際組織</div>
+            <div class="union-stat-value">非 ITUC 成員，歷史上曾任 WFTU 核心・積極拓展民間外交</div>
+          </div>
+          <div class="union-stat">
+            <div class="union-stat-label">定位</div>
+            <div class="union-stat-value">參加中國人民政治協商會議的人民團體</div>
+          </div>
+          <div class="divider"></div>
+          <div class="tag-row">
+            <span class="tag tag-red">馬列主義</span>
+            <span class="tag tag-red">黨管工會</span>
+            <span class="tag tag-red">維穩導向</span>
+            <span class="tag tag-red">傳動帶功能</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CFL 歷史 -->
+    <div class="card">
+      <div class="card-title"><div class="dot"></div>中華民國全國總工會（CFL）歷史沿革</div>
+      <div style="margin-bottom:16px;">
+        <div style="font-size:13px; font-weight:600; color:var(--navy); margin-bottom:8px; padding-bottom:4px; border-bottom:1px solid var(--border);">一、創立與早期發展（1920 年代–1948 年）</div>
+        <ul class="info-list">
+          <li><div class="info-bullet"></div><div>國民黨勞工路線深受孫中山「<strong>勞資協調</strong>」思想影響，主張勞資合作，反對中共推動的激進階級鬥爭。</div></li>
+          <li><div class="info-bullet"></div><div>馬超俊為早期重要領袖，1927 年清黨後出任南京國民政府勞工局局長，主導1929 年《工會法》制定，確立國家統合主義框架。</div></li>
+          <li><div class="info-bullet"></div><div>陸京士等幫會背景人士在上海工會中崛起，青幫大亨杜月笙勢力介入工會組織，成為國民黨都會區控勞的重要手段。</div></li>
+          <li><div class="info-bullet"></div><div>1948 年（民國 37 年），政府假南京召開全國第一次會員代表大會，正式宣告成立<strong>中華民國全國總工會</strong>，以增進勞工知能、發展生產、保障勞工生活及加強國際聯繫為宗旨。</div></li>
+        </ul>
+      </div>
+      <div style="margin-bottom:16px;">
+        <div style="font-size:13px; font-weight:600; color:var(--navy); margin-bottom:8px; padding-bottom:4px; border-bottom:1px solid var(--border);">二、遷臺與威權時期（1949–1987 年）</div>
+        <ul class="info-list">
+          <li><div class="info-bullet"></div><div>1949 年隨國民政府撤退臺灣，1951 年宣布復會，是戒嚴時期臺灣唯一合法的全國性總工會。</div></li>
+          <li><div class="info-bullet"></div><div>長期在「<strong>國家統合主義</strong>」下依附政府，為中華民國政府宣導反共國策，嚴防左翼思潮滋生。</div></li>
+          <li><div class="info-bullet"></div><div>呈現「萬年法統」現象：數十年無法召開第二屆代表大會，僅以「第一屆第 X 次」形式運作，嚴重阻礙臺灣本土勞工領袖晉升與工會民主化。直到 1976 年才勉強召開遷臺後第一次代表大會。</div></li>
+          <li><div class="info-bullet"></div><div>1949 年參與創建<strong>國際自由工聯（ICFTU）</strong>，確立了在國際勞工舞台的立足點，即今日 ITUC 的前身。</div></li>
+        </ul>
+      </div>
+      <div style="margin-bottom:16px;">
+        <div style="font-size:13px; font-weight:600; color:var(--navy); margin-bottom:8px; padding-bottom:4px; border-bottom:1px solid var(--border);">三、民主化轉型（1987–2000 年）</div>
+        <ul class="info-list">
+          <li><div class="info-bullet"></div><div>1987 年臺灣宣告解除長達 38 年的戒嚴，同年成立行政院勞工委員會（今勞動部），政治解凍深刻衝擊勞工領域。</div></li>
+          <li><div class="info-bullet"></div><div>1991 年底，李登輝政府推動資深中央民意代表全面退職，終結萬年國會，工會法統也隨之鬆動。</div></li>
+          <li><div class="info-bullet"></div><div>2000 年（民國 89 年），由國營事業工會為骨幹的<strong>全國產業總工會（全產總）</strong>正式成立，打破全總自 1948 年以來對全國性工會代表權的法定壟斷。</div></li>
+        </ul>
+      </div>
+      <div>
+        <div style="font-size:13px; font-weight:600; color:var(--navy); margin-bottom:8px; padding-bottom:4px; border-bottom:1px solid var(--border);">四、正名與現代化（2000 年至今）</div>
+        <ul class="info-list">
+          <li><div class="info-bullet"></div><div>2000 年 4 月 5 日，全總以「<strong>第三屆</strong>」名稱正式召開會員大會，完成組織正名與內部選舉正常化。歷屆理事長包括李正宗、林惠官、陳杰、陳瑞、溫國銘等。</div></li>
+          <li><div class="info-bullet"></div><div>2024 年 5 月 1 日，全總會址由臺北遷至<strong>臺中市</strong>。</div></li>
+          <li><div class="info-bullet"></div><div>積極參與 ITUC 政策制定，針對全球供應鏈、勞動力移動、職場家庭暴力及未來工作等議題提出書面建議，扮演臺灣與國際勞動標準接軌的關鍵橋梁。</div></li>
+          <li><div class="info-bullet"></div><div>現為臺灣唯一具備 ITUC 完整會員資格與政策參與權的全國性工會，長期擔任亞太區執委。</div></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ACFTU 歷史 -->
+    <div class="card">
+      <div class="card-title"><div class="dot" style="background:#8B0000"></div>中華全國總工會（ACFTU）歷史沿革</div>
+      <div style="margin-bottom:16px;">
+        <div style="font-size:13px; font-weight:600; color:#8B0000; margin-bottom:8px; padding-bottom:4px; border-bottom:1px solid var(--border);">一、萌芽與創立（1921–1927 年）</div>
+        <ul class="info-list">
+          <li><div class="info-bullet"></div><div>1921 年 8 月 11 日，中共在上海成立「<strong>中國勞動組合書記部</strong>」，首任主任張國燾，毛澤東擔任湖南部主任，標誌中國工運走向系統性政治鬥爭。</div></li>
+          <li><div class="info-bullet"></div><div>1922 年五一，第一次全國勞動大會在廣州召開，鄧中夏當選書記。1922 年香港海員大罷工，林偉民與蘇兆徵組建「中華海員工業聯合總會」，展現工人階級的政治能量。</div></li>
+          <li><div class="info-bullet"></div><div>1925 年 5 月 1 日，第二次全國勞動大會於廣州召開，匯聚 281 名代表，代表 166 個工會組織逾 54 萬名會員。大會正式宣告成立<strong>中華全國總工會</strong>，林偉民任首任委員長，劉少奇任副委員長，鄧中夏擔任秘書長。全總即加入蘇聯主導的「赤色工會國際」。</div></li>
+          <li><div class="info-bullet"></div><div>1927 年 2 月，上海 36 萬工人發動總罷工配合北伐，展現極強的社會癱瘓能力。</div></li>
+        </ul>
+      </div>
+      <div style="margin-bottom:16px;">
+        <div style="font-size:13px; font-weight:600; color:#8B0000; margin-bottom:8px; padding-bottom:4px; border-bottom:1px solid var(--border);">二、地下化與抗戰時期（1927–1949 年）</div>
+        <ul class="info-list">
+          <li><div class="info-bullet"></div><div>1927 年「四一二」清黨後，全總總部被查封，轉入地下運作，1929 年在上海秘密召開第五次全國勞動大會，1932 年底隨中共遷入江西中央蘇區。</div></li>
+          <li><div class="info-bullet"></div><div>全總設立「白區執行局（上海執行局）」領導地下工運，秘密出版《鐵錘》月刊，由羅登賢、饒漱石等人先後擔任黨團書記。</div></li>
+          <li><div class="info-bullet"></div><div>抗戰期間，中國勞動協會（朱學範主導）於 1939 年接納「陝甘寧邊區總工會」為團體會員，形成國共工運統一戰線。朱學範以勞協理事長身份頻繁出訪，1944 年出席費城 ILO 大會，1945 年在巴黎出席世界工聯大會（WFTU）。</div></li>
+          <li><div class="info-bullet"></div><div>1948 年 8 月，具劃時代意義的<strong>第六次全國勞動大會</strong>在哈爾濱召開，518 名代表出席，正式恢復中華全國總工會，陳雲當選主席，李立三與朱學範任副主席。</div></li>
+        </ul>
+      </div>
+      <div style="margin-bottom:16px;">
+        <div style="font-size:13px; font-weight:600; color:#8B0000; margin-bottom:8px; padding-bottom:4px; border-bottom:1px solid var(--border);">三、建國後與文革浩劫（1949–1978 年）</div>
+        <ul class="info-list">
+          <li><div class="info-bullet"></div><div>建國初期，全總扮演列寧主義「<strong>傳動帶</strong>」角色，既執行黨政方針，也作為群眾訴求上傳管道。1949 年在北京承辦世界工聯亞澳代表會議，成為新中國首次重大國際活動。</div></li>
+          <li><div class="info-bullet"></div><div>1953 年第七次全國代表大會召開，確立工會體制在社會主義過渡時期的定位。</div></li>
+          <li><div class="info-bullet"></div><div>1966 年文化大革命爆發，全總遭受嚴厲衝擊：1967 年 1 月，中共中央作出三項決定——金庫封存、全總黨組停止簽署文件、前期文件一律無效，全總<strong>被迫全面停止運作</strong>，各級工會組織癱瘓。</div></li>
+          <li><div class="info-bullet"></div><div>1972 年後，周恩來等人提出整頓企業管理，全總才開始著手調查，為重建工會組織做初步準備。</div></li>
+        </ul>
+      </div>
+      <div>
+        <div style="font-size:13px; font-weight:600; color:#8B0000; margin-bottom:8px; padding-bottom:4px; border-bottom:1px solid var(--border);">四、撥亂反正與改革開放後（1978 年至今）</div>
+        <ul class="info-list">
+          <li><div class="info-bullet"></div><div>1978 年 10 月，第九次全國代表大會召開，倪志福當選主席，鄧小平致詞強調工會必須密切聯繫群眾，標誌全面撥亂反正與重建。同年全總與財政部聯合恢復企業撥交工會經費制度。</div></li>
+          <li><div class="info-bullet"></div><div>改革開放後面臨結構性挑戰：國企改革打破「鐵飯碗」，外資與私企興起催生大量農民工，勞資關係從行政關係轉向市場契約關係。</div></li>
+          <li><div class="info-bullet"></div><div>歷任主席（尉健行、王兆國、李建國等）多為政治局委員，現任主席王東明為 40 年來首位非政治局委員的主席。</div></li>
+          <li><div class="info-bullet"></div><div>2005 年起，全總積極在外資、港資與臺資企業中組建工會；2009 年廈門飛鵬企業 12 名臺籍員工正式加入大陸工會，為臺商赴陸近 30 年來首例吸收臺籍會員。</div></li>
+          <li><div class="info-bullet"></div><div>2015 年，福建省總工會與中華民國全國總工會、臺灣多個縣市總工會簽訂常態交流協議，形成閩臺工會長效交流機制。</div></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 比較表 -->
+    <div class="card">
+      <div class="card-title"><div class="dot"></div>兩岸工會制度比較</div>
+      <div style="overflow-x:auto;">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th style="width:26%">比較維度</th>
+              <th>中華民國全國總工會（CFL）</th>
+              <th>中華全國總工會（ACFTU）</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>成立 / 重組時間</td>
+              <td>1948 年南京，1951 年遷臺復會，2000 年正名第三屆</td>
+              <td>1925 年廣州，1948 年哈爾濱重組</td>
+            </tr>
+            <tr>
+              <td>早期核心領導人</td>
+              <td>馬超俊、陸京士、水祥雲</td>
+              <td>林偉民、劉少奇、鄧中夏、陳雲、朱學範</td>
+            </tr>
+            <tr>
+              <td>意識形態</td>
+              <td>三民主義・勞資協調・反共</td>
+              <td>馬克思列寧主義・無產階級專政・階級鬥爭</td>
+            </tr>
+            <tr>
+              <td>與政黨關係</td>
+              <td>國民黨扈從→解嚴後逐步自主化</td>
+              <td>中共周邊組織與奪權工具→建國後黨管工會</td>
+            </tr>
+            <tr>
+              <td>國家機關定位</td>
+              <td>內政部 / 勞動部立案登記的民間社團法人</td>
+              <td>正部級單位（主席高配副國級），免登記社會團體</td>
+            </tr>
+            <tr>
+              <td>法理地位</td>
+              <td>1997 年自由化後為多元全國性總工會之一</td>
+              <td>境內唯一合法全國性總工會，具絕對排他性</td>
+            </tr>
+            <tr>
+              <td>國際組織參與</td>
+              <td>ITUC 成員及亞太區執委（1949 年參與創建 ICFTU）</td>
+              <td>非 ITUC 成員，曾任 WFTU 核心，積極民間外交</td>
+            </tr>
+            <tr>
+              <td>集體協商能力</td>
+              <td>較強，受勞資爭議處理法保障，具罷工權</td>
+              <td>較弱，受制企業管理層與地方黨委，重在調解維穩</td>
+            </tr>
+            <tr>
+              <td>歷史轉型拐點</td>
+              <td>1987 年解嚴 → 2000 年打破萬年法統正名第三屆</td>
+              <td>1978 年文革後恢復建制，融入社會主義市場經濟</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 交流背景 -->
+    <div class="card">
+      <div class="card-title"><div class="dot"></div>本次交流背景：兩岸勞工事務交流委員會</div>
+      <ul class="info-list">
+        <li><div class="info-bullet"></div><div>主辦方為<strong>中國職工交流中心</strong>，邀請貴會 45 周歲以下青年工會幹部及 15–24 歲工會子弟共 10 人（含帶隊）。</div></li>
+        <li><div class="info-bullet"></div><div>研討營在川食宿及交通費用由<strong>大陸方負擔</strong>，臺灣至四川往返交通費用自理。</div></li>
+        <li><div class="info-bullet"></div><div>主題：<strong>「行走巴蜀大地，共話青春夢想」</strong>，聚焦 AI 時代青年機遇、勞工議題與文化交流。</div></li>
+        <li><div class="info-bullet"></div><div>自 2015 年起，福建省總工會與中華民國全國總工會、臺灣多個縣市總工會簽訂常態交流協議，形成閩臺工會長效交流機制，範圍並拓展至金門、馬祖等地。</div></li>
+        <li><div class="info-bullet"></div><div>2008 年，指標性臺商富士康企業在深圳成立工會；2009 年 7 月，廈門飛鵬企業 12 名臺籍員工正式加入大陸工會，開創歷史先例。</div></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<div style="height: 32px;"></div>
+
+<script>
+  function showTab(id) {
+    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    const tabs = ['itinerary','flight','checklist','members','union'];
+    document.querySelectorAll('.tab-btn')[tabs.indexOf(id)].classList.add('active');
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  }
+
+  function toggleCheck(el) {
+    el.classList.toggle('checked');
+    updateProgress();
+  }
+
+  function updateProgress() {
+    const all = document.querySelectorAll('.check-item');
+    const checked = document.querySelectorAll('.check-item.checked');
+    const pct = Math.round((checked.length / all.length) * 100);
+    document.getElementById('progress-bar').style.width = pct + '%';
+    document.getElementById('check-count').textContent = '已完成 ' + checked.length + ' / ' + all.length + ' 項';
+  }
+</script>
+
+</body>
+</html>
