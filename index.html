@@ -509,11 +509,33 @@
     margin-top: 7px;
   }
 
-  /* PRINT */
+  /* PRINT / PDF */
   @media print {
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    body { font-size: 13px; line-height: 1.8; }
     .tab-nav { display: none; }
     .section { display: block !important; }
-    .section-header { break-before: page; }
+    .section-header { break-before: page; padding: 20px 16px 14px; }
+    .hero { padding: 32px 16px 28px; }
+    .hero h1 { font-size: 22px; }
+    .hero-meta { flex-direction: column; gap: 8px; align-items: center; }
+    .container { padding: 0 12px; }
+    .day-block { break-inside: avoid; margin-bottom: 12px; }
+    .schedule-item { padding: 10px 0; font-size: 13px; }
+    .flight-card { break-inside: avoid; }
+    .flight-route { flex-direction: column; align-items: center; gap: 8px; }
+    .flight-arrow { transform: rotate(90deg); width: 60px; }
+    .flight-details { grid-template-columns: 1fr; gap: 6px; }
+    .checklist-grid { grid-template-columns: 1fr 1fr; gap: 6px; }
+    .check-item { font-size: 12px; padding: 8px 10px; }
+    .member-grid { grid-template-columns: 1fr; gap: 8px; }
+    .union-grid { grid-template-columns: 1fr; }
+    .compare-table { font-size: 11px; }
+    .compare-table th, .compare-table td { padding: 7px 8px; }
+    .card { padding: 14px; margin-bottom: 12px; }
+    .alert { font-size: 12px; padding: 10px 12px; }
+    .section-title { font-size: 17px; }
+    .info-list li { font-size: 13px; }
   }
 </style>
 </head>
@@ -532,6 +554,10 @@
     <div class="hero-meta-item">
       <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
       四川省成都市
+    </div>
+    <div class="hero-meta-item">
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+      大陸交流名稱：兩岸勞工事務交流委員會
     </div>
   </div>
 </div>
@@ -892,11 +918,16 @@
       <div>此次前往<strong>成都</strong>（大陸城市），無需多國轉換插頭；大陸插座與臺灣相同，無需另備轉換插頭。出發前請確認台胞證效期。</div>
     </div>
 
+    <div class="alert alert-red">
+      <div class="alert-icon">💬</div>
+      <div><strong>請出發前申請微信（WeChat）帳號</strong>，行前將建立微信群組以利行程聯絡與緊急通知。尚未申請者請盡速辦理，並確認可正常使用。</div>
+    </div>
+
     <div class="card">
       <div class="card-title"><div class="dot"></div>出發前最後檢查（四大必備）</div>
       <div id="progress-bar-wrap">
         <div class="check-progress"><div class="check-progress-bar" id="progress-bar" style="width:0%"></div></div>
-        <div class="check-count" id="check-count">已完成 0 / 25 項</div>
+        <div class="check-count" id="check-count">已完成 0 / 27 項</div>
       </div>
     </div>
 
@@ -911,10 +942,12 @@
     </div>
 
     <div class="card">
-      <div class="card-title"><div class="dot"></div>個人攜帶物品清單（共 21 項）</div>
+      <div class="card-title"><div class="dot"></div>個人攜帶物品清單（共 23 項）</div>
       <div class="checklist-grid" id="general-checks">
+        <div class="check-item important" onclick="toggleCheck(this)"><div class="check-box"></div>eSIM 網卡（出發前開通）</div>
         <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"></div>個人藥品</div>
         <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"></div>輕薄外套</div>
+        <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"></div>輕便服裝（簡單輕便即可）</div>
         <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"></div>手機電源線</div>
         <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"></div>盥洗用品</div>
         <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"></div>自用毛巾</div>
