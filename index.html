@@ -434,8 +434,15 @@
   }
   @media (max-width: 600px) {
     .union-grid { grid-template-columns: 1fr; }
-    .flight-route { flex-direction: column; gap: 12px; }
-    .flight-arrow { transform: rotate(90deg); }
+    .flight-route { flex-direction: column; align-items: center; gap: 8px; }
+    .flight-arrow { width: 100%; text-align: center; padding: 0; }
+    .flight-arrow .flight-line { display: none; }
+    .flight-details { grid-template-columns: 1fr; gap: 10px; }
+    .flight-detail-item { border-bottom: 1px solid var(--slate-light); padding-bottom: 8px; }
+    .flight-detail-item:last-child { border-bottom: none; }
+    .flight-code { font-size: 36px; }
+    .flight-time { font-size: 20px; }
+    .flight-body { padding: 16px; }
   }
   .union-card {
     background: var(--white);
